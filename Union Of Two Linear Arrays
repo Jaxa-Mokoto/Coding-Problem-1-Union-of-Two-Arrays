@@ -1,0 +1,42 @@
+---------------------------------------------------------------------------------------------------------------------------------------
+Author: Modjadji Mokoto (@Jaxa-Mokoto)
+Publish Date: 15/02/2019
+---------------------------------------------------------------------------------------------------------------------------------------
+
+// find union of two arrays.cpp : Defines the entry point for the console application.
+//Problem: imagine you have two arrays A = [1,2,3,4,5] and B =[3,2,9,3,7]. Write a program to find out the common elements in both arrays
+
+#include "stdafx.h"
+#include <iostream>
+#include <algorithm>
+#include <string>
+
+using namespace std;
+
+int intesection_of_two_arrays()
+{
+	//define the two arrays
+	int A[5] = { 1,2,3,4,5 };
+	int B[5] = { 3,2,9,3,7 };
+
+	//Using a FOR loop, find the common values in both arrays with the upper bound of 5
+	for (int i = 0; i <= 4; i++)
+	{
+		for (int j = 0; j <= 4; j++)
+		{
+			if (A[i] == B[j])
+			{
+
+				std::cout << "From Array A, found element " << A[i] << " in Array B!" << std::endl;
+			}
+		}
+	}
+	system("pause");
+	return true;
+}
+
+int main() // Call the function
+{
+  intesection_of_two_arrays();
+  system("pause");
+}
